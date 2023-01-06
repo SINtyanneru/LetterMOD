@@ -1,0 +1,19 @@
+[
+  {
+    "modid": "letter_mod",
+    "name": "Letter mod",
+    "description": "Letter mod",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "http://rumiserver.com/sinch/Minecraft",
+    "updateUrl": "http://rumiserver.com/sinch/Minecraft",
+    "authorList": [
+      "RumiSystem",
+      "Rumisan"
+    ],
+    "credits": "RumiSystem/Rumisan",
+    "logoFile": "assets/logo.png",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
