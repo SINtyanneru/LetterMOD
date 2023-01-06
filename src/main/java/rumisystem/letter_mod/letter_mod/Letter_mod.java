@@ -67,10 +67,15 @@ public class Letter_mod {
      */
     @GameRegistry.ObjectHolder(MOD_ID)
     public static class Blocks {
-      /*
-          public static final MySpecialBlock mySpecialBlock = null; // placeholder for special block below
-      */
-        public static Block LatinLetter_A = null;                                                 //ラテン文字のA
+        /*
+            public static final MySpecialBlock mySpecialBlock = null; // placeholder for special block below
+        */
+        public static Block LatinLetter_A = new Block(Material.ROCK)
+                .setRegistryName(MOD_ID, "latin_letter_A_block")/*登録名の設定*/
+                .setCreativeTab(CreativeTabs.MISC)/*クリエのタブ*/
+                .setTranslationKey("block_latin_letter_A")/*システム名の設定*/
+                .setHardness(1.5F)/*硬さ*/
+                .setResistance(1.0F)/*爆破耐性*/;                                                 //ラテン文字のA
     }
 
     /**
@@ -79,11 +84,11 @@ public class Letter_mod {
      */
     @GameRegistry.ObjectHolder(MOD_ID)
     public static class Items {
-      /*
-          public static final ItemBlock mySpecialBlock = null; // itemblock for the block above
-          public static final MySpecialItem mySpecialItem = null; // placeholder for special item below
-      */
-      public static ItemBlock LatinLetter_A = null;                                                      //ラテン文字のA
+        /*
+            public static final ItemBlock mySpecialBlock = null; // itemblock for the block above
+            public static final MySpecialItem mySpecialItem = null; // placeholder for special item below
+        */
+        public static ItemBlock LatinLetter_A = (ItemBlock) new ItemBlock(Blocks.LatinLetter_A).setRegistryName("latin_letter_A");//ラテン文字のA
     }
 
     /**
@@ -100,9 +105,7 @@ public class Letter_mod {
              event.getRegistry().register(new ItemBlock(Blocks.myBlock).setRegistryName(MOD_ID, "myBlock"));
              event.getRegistry().register(new MySpecialItem().setRegistryName(MOD_ID, "mySpecialItem"));
             */
-            event.getRegistry().registerAll(
-                    new ItemBlock(Blocks.LatinLetter_A).setRegistryName("latin_letter_A")
-            );
+            event.getRegistry().registerAll(Items.LatinLetter_A);
         }
 
         /**
@@ -114,14 +117,7 @@ public class Letter_mod {
              event.getRegistry().register(new MySpecialBlock().setRegistryName(MOD_ID, "mySpecialBlock"));
             */
 
-            event.getRegistry().registerAll(
-                    new Block(Material.ROCK)
-                            .setRegistryName(MOD_ID, "latin_letter_A_block")/*登録名の設定*/
-                            .setCreativeTab(CreativeTabs.MISC)/*クリエのタブ*/
-                            .setTranslationKey("block_latin_letter_A")/*システム名の設定*/
-                            .setHardness(1.5F)/*硬さ*/
-                            .setResistance(1.0F)/*爆破耐性*/
-            );
+            event.getRegistry().registerAll(Blocks.LatinLetter_A);
         }
 
         @SubscribeEvent
