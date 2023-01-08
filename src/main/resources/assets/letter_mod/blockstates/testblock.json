@@ -1,0 +1,8 @@
+{
+  "variants": {
+      "facing=east": { "model": "letter_mod:block/testblock" },
+      "facing=south": { "model": "letter_mod:block/testblock", "y": 90 },
+      "facing=west": { "model": "letter_mod:block/testblock", "y": 180 },
+      "facing=north": { "model": "letter_mod:block/testblock", "y": 270 }
+    }
+}

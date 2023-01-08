@@ -1,6 +1,7 @@
 package rumisystem.letter_mod.letter_mod;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -70,12 +71,12 @@ public class Letter_mod {
         /*
             public static final MySpecialBlock mySpecialBlock = null; // placeholder for special block below
         */
-        public static Block LatinLetter_A = new Block(Material.ROCK)
-                .setRegistryName(MOD_ID, "latin_letter_A_block")/*登録名の設定*/
+        public static Block TestBlock = new Block(Material.ROCK)
+                .setRegistryName(MOD_ID, "testblock")/*登録名の設定*/
                 .setCreativeTab(CreativeTabs.MISC)/*クリエのタブ*/
-                .setTranslationKey("block_latin_letter_A")/*システム名の設定*/
+                .setTranslationKey("testblock")/*システム名の設定*/
                 .setHardness(1.5F)/*硬さ*/
-                .setResistance(1.0F)/*爆破耐性*/;                                                 //ラテン文字のA
+                .setResistance(1.0F)/*爆破耐性*/:                                                 //ラテン文字のA
     }
 
     /**
@@ -88,7 +89,7 @@ public class Letter_mod {
             public static final ItemBlock mySpecialBlock = null; // itemblock for the block above
             public static final MySpecialItem mySpecialItem = null; // placeholder for special item below
         */
-        public static ItemBlock LatinLetter_A = (ItemBlock) new ItemBlock(Blocks.LatinLetter_A).setRegistryName("latin_letter_A");//ラテン文字のA
+        public static ItemBlock TestBlock = (ItemBlock) new ItemBlock(Blocks.TestBlock).setRegistryName("testblock");//ラテン文字のA
     }
 
     /**
@@ -105,7 +106,7 @@ public class Letter_mod {
              event.getRegistry().register(new ItemBlock(Blocks.myBlock).setRegistryName(MOD_ID, "myBlock"));
              event.getRegistry().register(new MySpecialItem().setRegistryName(MOD_ID, "mySpecialItem"));
             */
-            event.getRegistry().registerAll(Items.LatinLetter_A);
+            event.getRegistry().registerAll(Items.TestBlock);
         }
 
         /**
@@ -117,12 +118,12 @@ public class Letter_mod {
              event.getRegistry().register(new MySpecialBlock().setRegistryName(MOD_ID, "mySpecialBlock"));
             */
 
-            event.getRegistry().registerAll(Blocks.LatinLetter_A);
+            event.getRegistry().registerAll(Blocks.TestBlock);
         }
 
         @SubscribeEvent
         public static void registerModels(ModelRegistryEvent event){
-            ModelLoader.setCustomModelResourceLocation(Items.LatinLetter_A, 0, new ModelResourceLocation(Items.LatinLetter_A.getRegistryName(), "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Items.TestBlock, 0, new ModelResourceLocation(Items.TestBlock.getRegistryName(), "inventory"));
         }
     }
 
