@@ -76,7 +76,7 @@ public class Letter_mod {
                 .setCreativeTab(CreativeTabs.MISC)/*クリエのタブ*/
                 .setTranslationKey("testblock")/*システム名の設定*/
                 .setHardness(1.5F)/*硬さ*/
-                .setResistance(1.0F)/*爆破耐性*/:                                                 //ラテン文字のA
+                .setResistance(1.0F)/*爆破耐性*/;                                                 //ラテン文字のA
     }
 
     /**
